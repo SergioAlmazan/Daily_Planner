@@ -1,0 +1,139 @@
+::selection {
+    background: #169992;;
+  }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    background-color: #040b0e; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+textarea{
+    background: transparent;
+    border: none; 
+    height: 100%;
+    width: 100%;
+    resize: none;
+    color: #010202;
+    padding: 10px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+    color: #ecf1eb;
+    border-radius: 0;
+    border-bottom: 10px solid #ecf1eb;
+    font-family: Calistoga;
+}
+
+
+.timecont {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif; 
+    font-size: 20px;
+}
+
+footer {
+  width: 100%;
+  height: 5px;
+  position: relative;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.hour-row {
+    height: 80px;
+    width: 100%;
+    background-color:  #ecf1eb;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+
+.time-block {
+    border-right: 3px solid #000000;
+    height: 100%;
+    width: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1%;  
+    color: #000000;  
+    font-size: 3rem;
+    border-radius: 15px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.time-block-present {
+    background-color: #a24d3e94; 
+}
+
+.time-block-future {
+    background-color: #3ea268c9;
+}
+
+.content-block {
+    height: 100%;
+    width: 70%;
+    font-family: 'Times New Roman', Times, serif;  
+    font-size: 2.5rem;
+}
+
+.saveBtn {
+    border: none;
+    border-left: 3px solid #000000;
+    background-color: #1d8ca0;
+    height: 100%;
+    width: 19%;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;  
+} 
+
+.saveBtn:hover {
+    background-color: #ffffffe1;
+    width: 17%;
+    transition: all 0.5s;
+}
+
+.saveBtnClicked {
+    background-color: #a50b3e;
+    color: #000000;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 992px) {
+
+    .time-block {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .time-block {
+        font-size: 13px;
+    }
+}
+
+

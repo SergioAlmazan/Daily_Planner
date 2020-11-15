@@ -70,6 +70,7 @@ const saveBtnEl = document.getElementById(`saveBtn` + i);
 const contentEl = document.getElementById(`content` + i);
 const timeEl = document.getElementById(`timeblock` + i);
 let savedContent = JSON.parse(localStorage.getItem("contentEl" + i))
+const hourEL = document.getElementById(`hourrow` + i);
 
 if (savedContent) {
     contentEl.value = savedContent;
@@ -94,11 +95,11 @@ function loopTime() {
     timeColor = hour.Time
     hourMoment = moment().get('hour');
     if (timeColor === currentTime) {
-        timeEl.classList.add("time-block-present");
+        hourEL.classList.add("time-block-present");
     }
     if (timeColor > currentTime) {
-        timeEl.classList.add("time-block-future");
-    }
+        hourEL.classList.add("time-block-future");
+     }
         }
 loopTime()
 })
