@@ -102,3 +102,13 @@ function loopTime() {
         }
 loopTime()
 })
+// This function updates the displayed time constatly for every hour
+function loopTime() {
+    document.getElementById("dt").innerText = moment().format('MMMM Do YYYY, h:mm a').toString();
+    setInterval(() => {
+        loopTime()
+    }, 20000);
+   }
+   
+   loopTime()
+   
