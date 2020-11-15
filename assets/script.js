@@ -65,3 +65,9 @@ calData.forEach(function (hour, i) {
      </div>
  `);
 })
+//created these variables for easier use later
+const saveBtnEl = document.getElementById(`saveBtn` + i);
+const contentEl = document.getElementById(`content` + i);
+const timeEl = document.getElementById(`timeblock` + i);
+let savedContent = JSON.parse(localStorage.getItem("contentEl" + i))
+
