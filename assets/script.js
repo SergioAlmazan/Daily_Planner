@@ -64,10 +64,41 @@ calData.forEach(function (hour, i) {
          </div>
      </div>
  `);
-})
+
 //created these variables for easier use later
 const saveBtnEl = document.getElementById(`saveBtn` + i);
 const contentEl = document.getElementById(`content` + i);
 const timeEl = document.getElementById(`timeblock` + i);
 let savedContent = JSON.parse(localStorage.getItem("contentEl" + i))
 
+if (savedContent) {
+    contentEl.value = savedContent;
+}
+//event listener to allow the user to save the input data
+saveBtnEl.addEventListener("click", function () {
+    let userInput = contentEl.value;
+    calData[i].content = userInput; 
+    localStorage.setItem("contentEl" + i, JSON.stringify(userInput));
+    saveBtnEl.innerText = "Saved!"
+    saveBtnEl.classList.add("BtnClicked")
+})
+
+//This funtion changes the class of element to change color for current time
+function loopTime() {
+    currentTime = moment().get('hour');
+    setInterval(() => {
+        loopTime()
+    }, 20000);
+    
+
+    timeColor = hour.Time
+    hourMoment = moment().get('hour');
+    if (timeColor === currentTime) {
+        timeEl.classList.add("time-block-present");
+    }
+    if (timeColor > currentTime) {
+        timeEl.classList.add("time-block-future");
+    }
+        }
+loopTime()
+})
